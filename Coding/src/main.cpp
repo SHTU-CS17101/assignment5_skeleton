@@ -109,14 +109,7 @@ int main(int argc, char *argv[])
 
 	clock_t start_time = std::chrono::system_clock::now();
     
-    if (conf.integral_method == "fw")
-    {
-        renderer.renderFrontToBack();
-    }
-    else if (conf.integral_method == "bw")
-    {
-        renderer.renderBackToFront();
-    }
+    renderer.renderFrontToBack();
 
     clock_t end_time = std::chrono::system_clock::now();
 	double time_elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();

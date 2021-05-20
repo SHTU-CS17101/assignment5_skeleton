@@ -17,7 +17,6 @@
 #define CONF_DEFAULT_OUTPUT_RESOLUTION 512
 #define CONF_DEFAULT_SCENE_PREFAB 1
 #define CONF_DEFAULT_STEP_LEN 0.01
-#define CONF_DEFAULT_INTEGRAL_METHOD "bw"
 
 
 struct Config
@@ -32,11 +31,6 @@ struct Config
     int scene_prefab;
     /* Ray marching step length */
     float step_len;
-    /* Integration strategies:
-       * fw: Front to back
-       * bw: Back to front
-     */
-    std::string integral_method;
     
 
     Config()
@@ -45,7 +39,6 @@ struct Config
         , output_resolution(CONF_DEFAULT_OUTPUT_RESOLUTION)
         , scene_prefab(CONF_DEFAULT_SCENE_PREFAB)
         , step_len(CONF_DEFAULT_STEP_LEN)
-        , integral_method(CONF_DEFAULT_INTEGRAL_METHOD)
     {
     }
 
@@ -94,10 +87,6 @@ struct Config
             {
                 step_len = std::stof(val);
             }
-            else if (key == "integral_method")
-            {
-                integral_method = val;
-            }
 
             if (line_stream >> key)
             {
@@ -128,7 +117,6 @@ struct Config
         std::cout << "output file: " << output_file << std::endl;
         std::cout << "output resolution: " << output_resolution << " x " << output_resolution << std::endl;
         std::cout << "step length: " << step_len << std::endl;
-        std::cout << "integral method: " << integral_method << std::endl;
         std::cout << "scene prefab: " << scene_prefab << std::endl;
         std::cout << "=====================" << std::endl;
         std::cout << std::endl;

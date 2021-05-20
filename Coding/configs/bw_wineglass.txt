@@ -1,5 +1,0 @@
-output_resolution   512
-output_file         ./output_bw_wineglass.png
-scene_prefab        2
-step_len            0.001
-integral_method     bw

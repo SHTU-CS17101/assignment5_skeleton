@@ -21,5 +21,4 @@ public:
     void setGeometry(ImplicitGeometry* implicit_geom);
     void setClassifier(Classifier* cls);
     void renderFrontToBack();
-    void renderBackToFront();
 };
