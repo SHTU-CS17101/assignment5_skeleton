@@ -3,7 +3,7 @@
 - Student Name:
 - Student ID:
 
-Please read the [Assignment 5](http://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/course/cs171.01/assignment5/assignment5.html) carefully.
+Please read the [Assignment 5](http://faculty.sist.shanghaitech.edu.cn/faculty/liuxp/course/cs171.01/assignment/5/assignment5.html) carefully.
 
 ## Instructions
 
